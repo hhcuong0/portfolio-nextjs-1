@@ -47,10 +47,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-7xl leading-[30px]'
       >
-        I'm a final-year Business student with hands-on experience in analyzing user requirements, visualizing data insights, and improving product features through real-world projects.  
-        During my internship at FPT, I collaborated with cross-functional teams to design business flows and contributed to internal tool enhancements.  
-        At UEH, I led academic projects using SQL and Power BI to identify key behavioral patterns.  
-        I'm passionate about turning vague problems into actionable solutions, and I enjoy working at the intersection of business logic, user empathy, and data-driven decision making.
+        I'm a final-year Management Information Systems (MIS) student with a strong foundation in business analysis, data visualization, and user-centered design.  
+        I’ve practiced turning user needs into clear flows, wireframes, and actionable solutions using tools like Figma, SQL, and Power BI.  
+        I'm passionate about solving real-world problems at the intersection of business, data, and user experience, and currently seeking internship opportunities to grow as a business analyst in a professional environment.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

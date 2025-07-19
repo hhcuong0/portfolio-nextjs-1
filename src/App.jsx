@@ -11,7 +11,7 @@ const App = () => {
       v7_relativeSplatPath: true,
     }}
     >
-      <div className='relative z-0 bg-primary'>   
+      <div className='min-h-screen relative z-0 bg-primary'>   
         <MouseGlow /> {/* Hiệu ứng phát sáng theo chuột */}    
       <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
