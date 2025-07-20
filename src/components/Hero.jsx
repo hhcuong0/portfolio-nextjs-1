@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import { styles } from "../styles";
 import avatar from "../assets/avatar.png";
-import cv from "/Users/hoanghuucuong/project_3D_developer_portfolio-main/public/cv.pdf" 
 
 const Hero = () => {
 const words = ["flows", "logic", "deliverables"];
