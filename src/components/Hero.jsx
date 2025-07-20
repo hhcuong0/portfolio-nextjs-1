@@ -23,7 +23,7 @@ const Hero = () => {
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col-reverse md:flex-row items-center md:items-start gap-10`}
       >
         {/* Cột trái: Dấu chấm & thanh dọc */}
-        <div className="absolute left-5 top-[10px] flex flex-col justify-start items-centerflex flex-col justify-center items-center mt-5">
+        <div className="absolute left-5 top-[5px] flex flex-col justify-start items-centerflex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
