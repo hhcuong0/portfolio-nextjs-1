@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='w-[220px] min-w-[220px] flex-shrink-0'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -53,7 +53,7 @@ const About = () => {
         I'm passionate about solving real-world problems at the intersection of business, data, and user experience, and currently seeking internship opportunities to grow as a business analyst in a professional environment.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex gap-6 overflow-x-auto sm:justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
