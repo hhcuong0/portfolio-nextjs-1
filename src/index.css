@@ -202,3 +202,34 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.card-container {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  
+  --x: 50%;
+  --y: 50%;
+  background: radial-gradient(
+    300px circle at var(--x) var(--y),
+    rgba(145, 94, 255, 0.25),
+    transparent 80%
+  );
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+.animate-grow {
+  animation: growLine 0.8s ease-out forwards;
+}
+
+

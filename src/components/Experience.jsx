@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -6,20 +6,44 @@ import {
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
+import { useInView } from "react-intersection-observer";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const ExperienceCard = ({ experience }) => {
+  const cardRef = useRef(null);
+
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  const handleMouseMove = (e) => {
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    cardRef.current.style.setProperty("--x", `${x}px`);
+    cardRef.current.style.setProperty("--y", `${y}px`);
+  };
+
+  
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "transparent",
+        boxShadow: "none",
+        padding: 0,
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ display: "none" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -32,26 +56,30 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <div
+        ref={(node) => {
+          cardRef.current = node;
+          inViewRef(node);
+        }}
+        className="card-container p-6 rounded-[20px] transition-all duration-300"
+        onMouseMove={handleMouseMove}
+      >
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
+        <p className='text-secondary text-[16px] font-semibold' style={{ margin: 0 }}>
           {experience.company_name}
         </p>
-      </div>
 
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
+        <ul className='mt-5 list-disc ml-5 space-y-2'>
+          {experience.points.map((point, index) => (
+            <li
+              key={`experience-point-${index}`}
+              className='text-white-100 text-[14px] pl-1 tracking-wider'
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
     </VerticalTimelineElement>
   );
 };

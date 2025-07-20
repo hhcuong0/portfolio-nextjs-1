@@ -227,7 +227,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "DreamNest - E-commerce Mobile App",
+    name: "E-commerce Mobile App",
     description:
       "Developed an e-commerce platform for home decor and furniture products with product browsing, shopping cart, and user authentication. Focused on creating a user-friendly interface and seamless shopping experience.",
       tags: [
