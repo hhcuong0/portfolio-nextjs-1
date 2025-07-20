@@ -3,7 +3,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
+    
     extend: {
+   
+        animation: {
+          'spin-slow': 'spin 8s linear infinite',
+        },
+      
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
