@@ -50,13 +50,13 @@ useEffect(() => {
   </p>
 
           {/* Nút Download CV */}
-          <div className="mt-16">
+          <div className="mt-10 text-center sm:text-left">
             <a
               href="/cv.pdf"
               download
-              className="inline-block px-6 py-3 backdrop-blur-md bg-white/5 border border-white/10 text-white font-medium rounded-full shadow-md hover:shadow-[0_0_30px_rgba(145,94,255,0.4)] hover:bg-white/10 transition-all duration-300 ease-in-out"
+              className="inline-block w-full sm:w-auto px-2 py-3 backdrop-blur-md bg-white/5 border border-white/10 text-white font-medium rounded-full shadow-md hover:shadow-[0_0_30px_rgba(145,94,255,0.4)] hover:bg-white/10 transition-all duration-300 ease-in-out"
             >
-              📄 Download my CV
+              📄 Download CV
             </a>
           </div>
         </div>
@@ -100,9 +100,9 @@ useEffect(() => {
       {/* Hook + Scroll indicator */}
     <div className="absolute xs:bottom-10 bottom-20 w-full flex flex-col items-center gap-4">
       <p
-        className="text-center text-white-100 text-base sm:text-lg italic transition-transform duration-300 ease-in-out relative group"
+        className="text-center text-white-100 text-base sm:text-lg italic transition-transform duration-300 ease-in-out relative group px-4 sm:px-0"
       >
-        <span className="inline-block px-4 py-2 rounded-md group-hover:scale-110 group-hover:shadow-[0_0_25px_rgba(145,94,255,0.6)] group-hover:bg-gradient-to-r group-hover:from-[#915EFF33] group-hover:to-[#915EFF11] transition-all duration-500">
+        <span className="inline-block max-w-xs sm:max-w-full px-4 py-2 rounded-md group-hover:scale-110 group-hover:shadow-[0_0_25px_rgba(145,94,255,0.6)] group-hover:bg-gradient-to-r group-hover:from-[#915EFF33] group-hover:to-[#915EFF11] transition-all duration-500">
           Curious about what I’ve done?{" "}
           <br className="sm:hidden" /> Scroll to see my work in action
         </span>
@@ -118,8 +118,6 @@ useEffect(() => {
     </div>
   </a>
 </div>
-
-
     </section>
   );
 };
