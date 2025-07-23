@@ -224,7 +224,7 @@ const projects = [
         },
     ],
     image: hadoop,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/hhcuong0/bigdata-insights.git",
   },
   {
     name: "E-commerce Mobile App",
