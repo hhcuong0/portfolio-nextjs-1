@@ -73,10 +73,6 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
@@ -89,17 +85,10 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
     name: "HTML",
     icon: html,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+
   {
     name: "UML",
     icon: uml,
