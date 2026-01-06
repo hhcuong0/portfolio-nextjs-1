@@ -59,7 +59,7 @@ const Hero = () => {
           {/* ✅ Nút Download CV responsive */}
           <div className="mt-4 w-full flex justify-center md:justify-start">
             <a
-              href="/cv.pdf"
+              href="/cuong-cv.pdf"
               download
               className="w-[200px] sm:w-auto px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-center backdrop-blur-md bg-white/5 border border-white/10 text-white font-medium rounded-full shadow-md hover:shadow-[0_0_30px_rgba(145,94,255,0.4)] hover:bg-white/10 transition-all duration-300 ease-in-out"
             >
