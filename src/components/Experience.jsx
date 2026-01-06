@@ -47,14 +47,23 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className='flex justify-center items-center w-full h-full'>
+        <div
+          className={`
+            flex justify-center items-center rounded-full
+            ${experience.isBigIcon ? "w-[80%] h-[80%]" : "w-full h-full"}
+          `}
+        >
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            className={`
+              object-contain
+              ${experience.isBigIcon ? "w-[90%] h-[90%]" : "w-[60%] h-[60%]"}
+            `}
           />
         </div>
       }
+      
     >
       <div
         ref={(node) => {

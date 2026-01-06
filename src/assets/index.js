@@ -34,6 +34,11 @@ import hotel from "./hotel.png";
 import pacueh from "./pacueh.png"
 import dreamnest from "./dreamnest.png"
 import dash from "./dash.png"
+import tour from "./tour.png";
+import returnImg from "./return.png";
+import ghtk from "./ghtk.webp";
+import favicon from "./favicon.png";
+
 
 export {
   logo,
@@ -69,4 +74,8 @@ export {
   dash,
   ai,
   pts,
+  returnImg as returns,
+  tour,
+  ghtk,
+  favicon,
 };

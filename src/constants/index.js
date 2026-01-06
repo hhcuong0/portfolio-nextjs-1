@@ -27,6 +27,10 @@ import {
   dash,
   ai,
   pts,
+  returns,
+  tour,
+  ghtk,
+  favicon,
 } from "../assets";
 
 export const navLinks = [
@@ -130,7 +134,7 @@ const experiences = [
     company_name: "Steam Games.",
     icon: bigdata,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Mar 2025 - May 2025",
     points: [
       "Analyzed game behavior and user engagement using open data from Steam; queried and processed large datasets using Spark SQL on Hadoop HDFS.",
       "Used Python (Pandas, Matplotlib) to clean, analyze, and visualize game features and player activity trends.",
@@ -162,6 +166,35 @@ const experiences = [
       "Developed a working desktop application in Visual Studio (C# WinForms), using object-oriented programming (OOP) and the MVC architectural pattern",
     ],
   },
+  {
+    title: "Online Tour Booking System",
+    company_name: "Vietnam Tourist",
+    icon: favicon,
+    iconBg: "#ffffff",
+    date: "Sep 2025 – Nov 2025",
+    points: [
+      "Analyzed business and user requirements for an online tour booking platform.",
+      "Designed Use Case, Activity, and Sequence Diagrams to model system workflows.",
+      "Built ERD and database schema; documented BRD and SRS.",
+      "Created Figma wireframes and prototypes to validate requirements.",
+            ],
+    },
+    {
+      title: "Return Management System",
+      company_name: "Giao Hàng Tiết Kiệm (GHTK)",
+      icon: ghtk,
+      iconBg: "#ffffff",
+      highlightIcon: true, // 👈 CHỈ GHTK
+      date: "Oct 2025 – Dec 2025",
+      points: [
+        "Analyzed AS-IS return process and identified operational issues.",
+        "Defined TO-BE business and functional requirements.",
+        "Modeled workflows using BPMN and Use Case Diagrams.",
+        "Designed ERD and UI wireframes for requirement validation.",
+      ],
+    },
+    
+  
 ];
 
 const projects = [
@@ -306,7 +339,34 @@ const projects = [
     ],
     image: dash, //
     source_code_link: "", // 
-  }
+  },
+  {
+    name: "Online Tour Booking System – Vietnam Tourist",
+    description:
+      "Performed business analysis for an online tour booking platform by gathering stakeholder requirements, modeling system workflows with UML diagrams, and designing database structure and UI mockups to support booking and management processes.",
+    tags: [
+      { name: "business analysis", color: "blue-text-gradient" },
+      { name: "uml", color: "green-text-gradient" },
+      { name: "erd", color: "orange-text-gradient" },
+      { name: "figma", color: "yellow-text-gradient" },
+    ],
+    image: tour,
+    source_code_link: "https://drive.google.com/drive/folders/1t3iepnq-8r8bVWiew8PEqWImF_rh83wT?usp=drive_link",
+  },  
+  {
+    name: "Return Management System – GHTK",
+    description:
+      "Analyzed and optimized a logistics return management system by identifying process inefficiencies, defining business and functional requirements, and modeling workflows and system structure to support operational improvements.",
+    tags: [
+      { name: "business analysis", color: "blue-text-gradient" },
+      { name: "bpmn", color: "green-text-gradient" },
+      { name: "use case", color: "pink-text-gradient" },
+      { name: "erd", color: "orange-text-gradient" },
+      { name: "figma", color: "yellow-text-gradient" },
+    ],
+    image: returns,
+    source_code_link: "https://ghtk-return-ui.vercel.app/",
+  },  
 ];
 
 export { services, technologies, experiences, projects };
